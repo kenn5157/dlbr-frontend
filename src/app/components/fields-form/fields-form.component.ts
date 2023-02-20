@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Field } from 'src/assets/field';
 
 @Component({
   selector: 'app-fields-form',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class FieldsFormComponent {
 
+  model = new Field(0, 'M01', 32, 'grass', 'grazing')
+
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
 }

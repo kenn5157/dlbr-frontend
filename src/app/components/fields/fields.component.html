@@ -1,1 +1,9 @@
-<p>fields works!</p>
+<h2>Fields</h2>
+<ul>
+    <li *ngFor="let field of fields">
+        <a routerLink="/detail/{{field.id}}">
+            <span class="badge"></span> {{field.name}}
+        </a>
+    </li>
+</ul>
+<app-fields-form></app-fields-form>

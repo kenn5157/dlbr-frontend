@@ -10,6 +10,14 @@ header, footer {
     padding: 10px 10%;
     background-color: #369;
 }
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    margin-top: auto;
+}
 
 .nav_links {
     list-style: none;
@@ -25,5 +33,5 @@ header, footer {
 }
 
 .nav_links li a:hover {
-    color: #339;
+    color: #ccc;
 }
