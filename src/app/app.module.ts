@@ -11,25 +11,29 @@ import { FieldsFormComponent } from './components/fields-form/fields-form.compon
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FieldsComponent,
-    MessagesComponent,
-    JobsComponent,
-    FieldsFormComponent,
-    DashboardComponent,
-    FieldsFormComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    CommonModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        FieldsComponent,
+        MessagesComponent,
+        JobsComponent,
+        FieldsFormComponent,
+        DashboardComponent,
+        FieldsFormComponent,
+        FormComponent,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ]
 })
 export class AppModule { }
