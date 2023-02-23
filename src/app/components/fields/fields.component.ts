@@ -24,4 +24,26 @@ export class FieldsComponent {
     this.fieldService.getFields()
       .subscribe(fields => this.fields = fields);
   }
+
+  name = '';
+  size = 0;
+  crop = '';
+
+  sendRequest() {
+    let field = new Field(
+      0, this.name, this.size, this.crop, 'status'
+    );
+
+    this.fieldService.addField(field).subscribe((newField) => {
+      console.log('New field created:', newField);
+      this.getFields();
+      this.clearFields();
+    });
+  }
+
+  clearFields() {
+    this.name = '';
+    this.size = 0;
+    this.crop = '';
+  }
 }

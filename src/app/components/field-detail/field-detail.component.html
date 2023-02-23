@@ -1,0 +1,11 @@
+<div *ngIf="field">
+
+    <h2>{{field.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{field.id}}</div>
+    <div>
+        <label for="field-name">Field name: </label>
+        <input id="field-name" [(ngModel)]="field.name" placeholder="name">
+    </div>
+</div>
+<button type="button" (click)="save()">save</button>
+<button type="button" (click)="goBack()">go back</button>

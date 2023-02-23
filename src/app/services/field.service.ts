@@ -45,4 +45,19 @@ export class FieldService {
 			catchError(this.handleError<Field>('addField'))
 		);
 	}
+	// Updates field at ID
+	updateField(id: number, field: Field): Observable<Field> {
+		return this.http.put<Field>(this.fieldUrl, field, this.httpOptions).pipe(
+			tap((updatedField: Field) => this.log(`updated field w/ id=${updatedField.id}`)),
+			catchError(this.handleError<Field>('updateField'))
+		);
+	}
+	// Gets single field by ID
+	getField(id: number): Observable<Field> {
+		const url = `${this.fieldUrl}/${id}`;
+		return this.http.get<Field>(url).pipe(
+			tap(_ => this.log(`fetched field id=${id}`)),
+			catchError(this.handleError<Field>(`getHero id=${id}`))
+		);
+	}
 }

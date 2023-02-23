@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormComponent } from './components/form/form.component';
+import { FieldDetailComponent } from './components/field-detail/field-detail.component';
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { FormComponent } from './components/form/form.component';
         DashboardComponent,
         FieldsFormComponent,
         FormComponent,
+        FieldDetailComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
