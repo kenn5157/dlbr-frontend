@@ -2,7 +2,7 @@
 <ul>
     <li *ngFor="let field of fields">
         <a routerLink="/field-detail/{{field.id}}">
-            <span class="badge"></span> {{field.name}}
+            <span class="badge"></span> {{field.name}} {{field.size}} {{field.crop}}
         </a>
     </li>
 </ul>

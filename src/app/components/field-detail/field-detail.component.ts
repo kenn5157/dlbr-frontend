@@ -33,8 +33,8 @@ export class FieldDetailComponent {
   }
   save() {
     if (this.field) {
-      this.fieldService.updateField(8, this.field)
-      .subscribe(() => this.goBack);
+      this.fieldService.updateField(this.field.id, this.field)
+      .subscribe(() => this.goBack());
     }
   }
 

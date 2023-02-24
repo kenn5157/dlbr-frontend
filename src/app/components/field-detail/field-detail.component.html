@@ -1,4 +1,4 @@
-<div *ngIf="field">
+<div *ngIf="field" class="fieldForm">
 
     <h2>{{field.name | uppercase}} Details</h2>
     <div><span>id: </span>{{field.id}}</div>
@@ -6,6 +6,16 @@
         <label for="field-name">Field name: </label>
         <input id="field-name" [(ngModel)]="field.name" placeholder="name">
     </div>
+    <div>
+        <label for="field-size">Field size: </label>
+        <input id="field-size" [(ngModel)]="field.size" placeholder="size">
+    </div>
+    <div>
+        <label for="field-crop">Crop: </label>
+        <input id="field-crop" [(ngModel)]="field.crop" placeholder="crop">
+    </div>
+    <div>
+        <button type="button" (click)="save()">save</button>
+        <button type="button" (click)="goBack()">go back</button>
+    </div>
 </div>
-<button type="button" (click)="save()">save</button>
-<button type="button" (click)="goBack()">go back</button>

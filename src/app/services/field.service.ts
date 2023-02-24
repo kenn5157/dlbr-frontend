@@ -47,7 +47,8 @@ export class FieldService {
 	}
 	// Updates field at ID
 	updateField(id: number, field: Field): Observable<Field> {
-		return this.http.put<Field>(this.fieldUrl, field, this.httpOptions).pipe(
+		const url = `${this.fieldUrl}/${id}`
+		return this.http.put<Field>(url, field, this.httpOptions).pipe(
 			tap((updatedField: Field) => this.log(`updated field w/ id=${updatedField.id}`)),
 			catchError(this.handleError<Field>('updateField'))
 		);
